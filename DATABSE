@@ -1,0 +1,13 @@
+-- card generator
+
+CREATE DATABASE course_db;
+USE course_db;
+CREATE TABLE courses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(100) NOT NULL,  -- Limited to 100 characters as per validation
+    duration INT NOT NULL,  -- Storing duration as an integer
+    image LONGBLOB NOT NULL,  -- Stores image data as BLOB
+    pdf LONGBLOB NOT NULL  -- Stores PDF data as BLOB
+);
+SELECT * FROM courses;
